@@ -1,25 +1,30 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import Appbar from './src/components/Appbar';
+import { StackNavigator } from 'react-navigation';
 import FolderListScreen from './src/screens/FolderListScreen';
+import MainScreen from './src/screens/MainScreen';
+import LoginScreen from './src/screens/LoginScreen';
+import SignupScreen from './src/screens/SignupScreen';
+import CardListScreen from './src/screens/CardListScreen';
+ import FolderRegistrationScreen from './src/screens/FolderRegistrationScreen';
+ import CardRegistrationScreen from './src/screens/CardRegistrationScreen';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Appbar />
-        <FolderListScreen />
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fffdf6',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: 78,
+const App = StackNavigator({
+  Home:   { screen: FolderListScreen },
+  Main: {screen: MainScreen },
+  FolderRegistration: { screen: FolderRegistrationScreen },
+  Login:  { screen: LoginScreen },
+  Signup: { screen: SignupScreen },
+  CardList: { screen: CardListScreen },
+  CardRegistration: { screen: CardRegistrationScreen },
+}, {
+  navigationOptions: {
+    headerTitle: 'Memot',
+    headerStyle: {
+      backgroundColor: '#265366',
+    },
+    headerTitleStyle: {
+      color: '#fff',
+    },
   },
 });
+
+export default App;

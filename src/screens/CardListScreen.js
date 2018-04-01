@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import FolderList from '../components/FolderList';
+import CardList from '../components/CardList';
 import CircleButton from '../elements/CircleButton';
 
-class FolderListScreen extends React.Component {
+class CardListScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <FolderList navigation={this.props.navigation} />
+        <CardList navigation={this.props.navigation} />
         <CircleButton>
           { '\uf067'}
         </CircleButton>
@@ -24,4 +24,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FolderListScreen;
+export default CardListScreen;

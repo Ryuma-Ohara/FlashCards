@@ -1,29 +1,27 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableHighlight } from 'react-native';
 
 class FolderList extends React.Component {
   render() {
     return (
       <View sytle={styles.folderList}>
-        <View style={styles.folderListItem}>
-          <Text style={styles.folderTitle}>Verb1</Text>
-        </View>
+        <TouchableHighlight onPress={() => { this.props.navigation.navigate('CardRegistration'); }}>
+          <View style={styles.folderListItem}>
+            <Text style={styles.folderTitle}>Verb1</Text>
+          </View>
+        </TouchableHighlight>
 
-        <View style={styles.folderListItem}>
-          <Text style={styles.folderTitle}>Verb1</Text>
-        </View>
+        <TouchableHighlight onPress={() => { this.props.navigation.navigate('FolderRegistration'); }}>
+          <View style={styles.folderListItem}>
+            <Text style={styles.folderTitle}>Verb1</Text>
+          </View>
+        </TouchableHighlight>
 
-        <View style={styles.folderListItem}>
-          <Text style={styles.folderTitle}>Verb1</Text>
-        </View>
-
-        <View style={styles.folderListItem}>
-          <Text style={styles.folderTitle}>Verb1</Text>
-        </View>
-
-        <View style={styles.folderListItem}>
-          <Text style={styles.folderTitle}>Verb1</Text>
-        </View>
+        <TouchableHighlight onPress={() => { this.props.navigation.navigate('FolderRegistration'); }}>
+          <View style={styles.folderListItem}>
+            <Text style={styles.folderTitle}>Verb1</Text>
+          </View>
+        </TouchableHighlight>
       </View>
     );
   }
