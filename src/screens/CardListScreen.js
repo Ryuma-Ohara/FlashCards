@@ -8,7 +8,7 @@ class CardListScreen extends React.Component {
     return (
       <View style={styles.container}>
         <CardList navigation={this.props.navigation} />
-        <CircleButton>
+        <CircleButton onPress={() => { this.props.navigation.navigate('CardRegistration'); }}>
           { '\uf067'}
         </CircleButton>
       </View>

@@ -7,19 +7,19 @@ class CardList extends React.Component {
       <View sytle={styles.cardList}>
         <TouchableHighlight onPress={() => { this.props.navigation.navigate('CardRegistration'); }}>
           <View style={styles.cardListItem}>
-            <Text style={styles.cardTitle}>Verb1</Text>
+            <Text style={styles.cardTitle}>Front / Back</Text>
           </View>
         </TouchableHighlight>
 
         <TouchableHighlight onPress={() => { this.props.navigation.navigate('CardRegistration'); }}>
           <View style={styles.cardListItem}>
-            <Text style={styles.cardTitle}>Verb1</Text>
+            <Text style={styles.cardTitle}>Front / Back</Text>
           </View>
         </TouchableHighlight>
 
         <TouchableHighlight onPress={() => { this.props.navigation.navigate('CardRegistration'); }}>
           <View style={styles.cardListItem}>
-            <Text style={styles.cardTitle}>Verb1</Text>
+            <Text style={styles.cardTitle}>Front / Back</Text>
           </View>
         </TouchableHighlight>
       </View>

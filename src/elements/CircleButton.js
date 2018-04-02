@@ -1,4 +1,5 @@
 import React from 'react';
+import { Font } from 'expo';
 import { StyleSheet, View, Text, TouchableHighlight } from 'react-native';
 import fontAwesome from '../../assets/fonts/fontawesome-webfont.ttf';
 
@@ -7,7 +8,7 @@ class CircleButton extends React.Component {
     fontLoaded: false,
   }
   async componentWillMount() {
-    await fontAwesome.loadAsync({
+    await Font.loadAsync({
       FontAwesome: fontAwesome,
     });
 
@@ -15,7 +16,7 @@ class CircleButton extends React.Component {
   }
 
   render() {
-    const { style, color } = this.props;
+    const { style, color, onPress } = this.props;
 
     let bgColor = '#e31676';
     let textColor = '#fff';
@@ -26,8 +27,8 @@ class CircleButton extends React.Component {
     }
 
     return (
-      <TouchableHighlight>
-        <View style={[styles.circleButton, style, { backgroundColor: bgColor }]}>
+      <TouchableHighlight style={[styles.container, style]} onPress={onPress} underlayColor="transparent">
+        <View style={[styles.circleButton, { backgroundColor: bgColor }]}>
           {
             this.state.fontLoaded ? (
               <Text style={[styles.circleButtonTitle, { color: textColor }]}>
@@ -42,10 +43,12 @@ class CircleButton extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  circleButton: {
+  container: {
     position: 'absolute',
     bottom: 32,
     right: 32,
+  },
+  circleButton: {
     width: 48,
     height: 48,
     borderRadius: 24,

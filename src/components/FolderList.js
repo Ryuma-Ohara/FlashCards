@@ -5,19 +5,19 @@ class FolderList extends React.Component {
   render() {
     return (
       <View sytle={styles.folderList}>
-        <TouchableHighlight onPress={() => { this.props.navigation.navigate('CardRegistration'); }}>
+        <TouchableHighlight onPress={() => { this.props.navigation.navigate('Main'); }}>
           <View style={styles.folderListItem}>
             <Text style={styles.folderTitle}>Verb1</Text>
           </View>
         </TouchableHighlight>
 
-        <TouchableHighlight onPress={() => { this.props.navigation.navigate('FolderRegistration'); }}>
+        <TouchableHighlight onPress={() => { this.props.navigation.navigate('Main'); }}>
           <View style={styles.folderListItem}>
             <Text style={styles.folderTitle}>Verb1</Text>
           </View>
         </TouchableHighlight>
 
-        <TouchableHighlight onPress={() => { this.props.navigation.navigate('FolderRegistration'); }}>
+        <TouchableHighlight onPress={() => { this.props.navigation.navigate('Main'); }}>
           <View style={styles.folderListItem}>
             <Text style={styles.folderTitle}>Verb1</Text>
           </View>

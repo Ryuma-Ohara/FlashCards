@@ -8,8 +8,8 @@ class FolderListScreen extends React.Component {
     return (
       <View style={styles.container}>
         <FolderList navigation={this.props.navigation} />
-        <CircleButton>
-          { '\uf067'}
+        <CircleButton onPress={() => { this.props.navigation.navigate('FolderRegistration'); }}>
+          { '\uf067' }
         </CircleButton>
       </View>
     );
